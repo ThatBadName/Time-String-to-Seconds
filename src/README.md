@@ -1,16 +1,8 @@
 # Time-String-to-Seconds
-A very simple light-weight package that will convert a time string like `8years 34m 8mo` to seconds (in this case `273026520` seconds)
-```
-npm i @thatbadname/time-string-converter
-```
-to install
+A very simple light-weight package that can do a few simple functions on time strings
 
 ## Usage
-Time strings should be formatted like `<number><length>`. <number> being the time (eg: 7) and <length> being the length (eg: years). If no valid input is provided (eg: `26lmao`) it will ignore it and return `0`. Something like `1m 17lmao` would return `60`.
-```js
-const convert = require('time-string-converter')
-console.log(convert.convertStringToSeconds('8years 34m 8mo')) //Output: 273026520
-```
+Time strings should be formatted like `<number><length>`. <number> being the time (eg: 7) and <length> being the length (eg: years). If no valid input is provided (eg: `26lmao`) it will ignore it and return `0`. Something like `1m 17lmao` would return `60`
 
 | Time Phrase | Valid Variations |
 |---|---|
@@ -22,8 +14,38 @@ console.log(convert.convertStringToSeconds('8years 34m 8mo')) //Output: 27302652
 | Months | `mo`, `month`, `months` |
 | Years | `y`, `yr`, `year`, `years` |
 
-## The reverse
-You can also use the `convertSecondsToDHMS()` function to do the reverse
+## Installation
+In your terminal run:
+```
+npm i @thatbadname/time-string-converter
+```
+and your done!
 
-## Formatting
-If you want to reformat a time string (eg: 61m -> 1hour 1minute) use the `reformatTimeString()` function
+## Code Examples
+### Converting to seconds
+```js
+const convert = require('time-string-converter')
+console.log(convert.convertStringToSeconds('1m'))
+// Output: 60
+```
+### Convert seconds to time string
+```js
+const convert = require('time-string-converter')
+console.log(convert.convertSecondsToTimeObject(61))
+/* Output:  {
+    years: 0,
+    months: 0,
+    weeks: 0,
+    days: 0,
+    hours: 0,
+    minutes: 1,
+    seconds: 1
+  }
+*/
+```
+### Convert seconds to formatted string
+```js
+const convert = require('time-string-converter')
+console.log(convert.reformatTimeString(61))
+// Output: 1minute 1second
+```

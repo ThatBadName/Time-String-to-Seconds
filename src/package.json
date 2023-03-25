@@ -1,6 +1,6 @@
 {
   "name": "@thatbadname/time-string-converter",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "Converts a time string into seconds and back",
   "main": "index.js",
   "repository": {

@@ -15,7 +15,7 @@ function convertStringToSeconds(durationString) {
   return time
 }
 
-function convertSecondsToDHMS(seconds) {
+function convertSecondsToTimeObject(seconds) {
   seconds = Number(seconds)
   let years = 0
   let months = 0
@@ -43,7 +43,7 @@ function convertSecondsToDHMS(seconds) {
 
 function reformatTimeString(string) {
   let formatSeconds = convertStringToSeconds(string)
-  let reformatString = convertSecondsToDHMS(formatSeconds)
+  let reformatString = convertSecondsToTimeObject(formatSeconds)
 
   let timeString = []
   if (reformatString.years > 0) timeString.push(`${reformatString.years}${reformatString.years == 1 ? 'year' : 'years'}`)
@@ -58,6 +58,6 @@ function reformatTimeString(string) {
 
 module.exports = {
   convertStringToSeconds,
-  convertSecondsToDHMS,
+  convertSecondsToTimeObject,
   reformatTimeString
 }
