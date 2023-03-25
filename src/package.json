@@ -1,11 +1,8 @@
 {
   "name": "@thatbadname/time-string-converter",
-  "version": "1.0.2",
-  "description": "Converts a time string (eg: 45m 23s) into seconds and back",
+  "version": "1.0.4",
+  "description": "Converts a time string into seconds and back",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ThatBadName/Time-String-to-Seconds.git"
