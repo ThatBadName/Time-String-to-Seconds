@@ -41,7 +41,22 @@ function convertSecondsToDHMS(seconds) {
   }
 }
 
+function reformatTimeString(string) {
+  let formatSeconds = convertStringToSeconds(string)
+  let reformatString = convertSecondsToDHMS(formatSeconds)
+
+  let timeString = []
+  if (reformatString.years > 0) timeString.push(`${reformatString.years}${reformatString.years == 1 ? 'year' : 'years'}`)
+  if (reformatString.months > 0) timeString.push(`${reformatString.months}${reformatString.months == 1 ? 'month' : 'months'}`)
+  if (reformatString.weeks > 0) timeString.push(`${reformatString.weeks}${reformatString.weeks == 1 ? 'week' : 'weeks'}`)
+  if (reformatString.days > 0) timeString.push(`${reformatString.days}${reformatString.days == 1 ? 'day' : 'days'}`)
+  if (reformatString.hours > 0) timeString.push(`${reformatString.hours}${reformatString.hours == 1 ? 'hour' : 'hours'}`)
+  if (reformatString.minutes > 0) timeString.push(`${reformatString.minutes}${reformatString.minutes == 1 ? 'minute' : 'minutes'}`)
+  if (reformatString.seconds > 0) timeString.push(`${reformatString.seconds}${reformatString.seconds == 1 ? 'second' : 'seconds'}`)
+}
+
 module.exports = {
   convertStringToSeconds,
-  convertSecondsToDHMS
+  convertSecondsToDHMS,
+  reformatTimeString
 }
