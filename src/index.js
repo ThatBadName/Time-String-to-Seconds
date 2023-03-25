@@ -53,6 +53,7 @@ function reformatTimeString(string) {
   if (reformatString.hours > 0) timeString.push(`${reformatString.hours}${reformatString.hours == 1 ? 'hour' : 'hours'}`)
   if (reformatString.minutes > 0) timeString.push(`${reformatString.minutes}${reformatString.minutes == 1 ? 'minute' : 'minutes'}`)
   if (reformatString.seconds > 0) timeString.push(`${reformatString.seconds}${reformatString.seconds == 1 ? 'second' : 'seconds'}`)
+  return timeString.join(', ')
 }
 
 module.exports = {
