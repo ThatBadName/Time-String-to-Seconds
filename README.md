@@ -1,6 +1,6 @@
 ﻿# Time-String-to-Seconds
-A very simple light-weight package that can do a few simple functions on time strings\
-[Support Discord Server](https://discord.gg/9jFqS5H43Q)
+<iframe src="https://discord.com/widget?id=994642021425877112&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+A very simple light-weight package that can do a few simple functions on time strings
 
 ## Usage
 Time strings should be formatted like `<number><length>`. <number> being the time (eg: 7) and <length> being the length (eg: years). If no valid input is provided (eg: `26lmao`) it will ignore it and return `0`. Something like `1m 17lmao` would return `60`
