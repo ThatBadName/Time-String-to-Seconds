@@ -1,5 +1,5 @@
 # Time-String-to-Seconds
-A very simple light-weight package that can do a few simple functions on time strings
+A very simple light-weight package that can do a few simple functions on time strings\
 ![Discord Banner 4](https://discordapp.com/api/guilds/994642021425877112/widget.png?style=banner4)
 
 ## Usage
